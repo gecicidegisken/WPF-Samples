@@ -38,9 +38,7 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FetchTimerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FetchTimerForm.cs" />
     <Compile Include="FetchTimerForm.designer.cs">
       <DependentUpon>FetchTimerForm.cs</DependentUpon>
     </Compile>

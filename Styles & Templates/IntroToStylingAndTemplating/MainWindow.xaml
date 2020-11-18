@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IntroToStylingAndTemplating"
         mc:Ignorable="d"
-        Title="Style Intro Sample" Loaded="WindowLoaded" SizeToContent="WidthAndHeight">
+        Title="Style Intro Sample" Loaded="WindowLoaded" SizeToContent="WidthAndHeight" Height="1058" Width="1544">
     <Window.Resources>
         <ObjectDataProvider x:Key="MyPhotos"
       ObjectType="{x:Type local:PhotoList}"/>
@@ -97,11 +97,18 @@
         </Style>
 
     </Window.Resources>
-    <StackPanel Margin="10">
-        <TextBlock Style="{StaticResource TitleText}" Name="textblock1">My Pictures</TextBlock>
-        <TextBlock>Check out my new pictures!</TextBlock>
+    <StackPanel x:Name="panel" Margin="10,45,10,7" RenderTransformOrigin="0.316,0.529" HorizontalAlignment="Stretch">
+        <TextBlock Style="{StaticResource TitleText}" x:Name="textblock2"><Run Text="My Pictures"/></TextBlock>
+        <TextBlock><Run Text="Check out my new pictures!"/></TextBlock>
 
         <ListBox ItemsSource="{Binding Source={StaticResource MyPhotos}}"
-               Background="Silver" Width="600" Margin="10" SelectedIndex="0"/>
+            Background="Silver" Width="587" Margin="10" SelectedIndex="0" Height="96"/>
+        <Button x:Name="CountBtn" Content="Count Observer" Height="38" Width="162" RenderTransformOrigin="-2.748,0.997" HorizontalAlignment="Center" Click="CountBtn_Click"/>
+        <Button x:Name="StringBtn" Content="String Observer" Height="38" Width="162" RenderTransformOrigin="-2.748,0.997" HorizontalAlignment="Center" Click="StringBtn_Click"/>
+        <Button x:Name="btnOpenFile" Click="btnOpenFile_Click" Height="100" Width="268" HorizontalAlignment="Center" Content="New Photo"/>
+        <ScrollViewer x:Name="label" Height="279" VerticalAlignment="Bottom"/>
+
+
+
     </StackPanel>
 </Window>
