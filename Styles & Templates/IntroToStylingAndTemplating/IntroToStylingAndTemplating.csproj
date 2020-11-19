@@ -44,12 +44,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddPhoto.cs" />
     <Compile Include="App.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="CountObserver.cs" />
     <Compile Include="Gozlemleyiciler.cs" />
+    <Compile Include="RemovePhoto.cs" />
     <Compile Include="StringObserver.cs" />
     <Compile Include="ISubject.cs" />
     <Compile Include="Observer.cs" />
@@ -71,6 +73,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UpdateList.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

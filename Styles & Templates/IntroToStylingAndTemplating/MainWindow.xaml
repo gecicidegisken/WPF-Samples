@@ -97,7 +97,7 @@
         </Style>
 
     </Window.Resources>
-    <StackPanel x:Name="panel" Margin="10,45,10,7" RenderTransformOrigin="0.316,0.529" HorizontalAlignment="Stretch">
+    <StackPanel x:Name="panel" Margin="10,45,10,7" RenderTransformOrigin="0.316,0.529">
         <TextBlock Style="{StaticResource TitleText}" x:Name="textblock2"><Run Text="My Pictures"/></TextBlock>
         <TextBlock><Run Text="Check out my new pictures!"/></TextBlock>
 
@@ -105,7 +105,8 @@
             Background="Silver" Width="587" Margin="10" SelectedIndex="0" Height="96"/>
         <Button x:Name="CountBtn" Content="Count Observer" Height="38" Width="162" RenderTransformOrigin="-2.748,0.997" HorizontalAlignment="Center" Click="CountBtn_Click"/>
         <Button x:Name="StringBtn" Content="String Observer" Height="38" Width="162" RenderTransformOrigin="-2.748,0.997" HorizontalAlignment="Center" Click="StringBtn_Click"/>
-        <Button x:Name="btnOpenFile" Click="btnOpenFile_Click" Height="100" Width="268" HorizontalAlignment="Center" Content="New Photo"/>
+        <Button x:Name="btnOpenFile" Click="btnOpenFile_Click" Height="100" Width="268" HorizontalAlignment="Stretch" Content="New Photo"/>
+        <Button x:Name="RemoveBtn" Click="RemoveBtn_Click" Height="100" Width="268" Content="Remove Photo&#xD;&#xA;" RenderTransformOrigin="2.404,-3.497" HorizontalAlignment="Stretch"/>
         <ScrollViewer x:Name="label" Height="279" VerticalAlignment="Bottom"/>
 
 

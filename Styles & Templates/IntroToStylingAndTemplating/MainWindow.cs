@@ -15,15 +15,21 @@ namespace IntroToStylingAndTemplating
     ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
+       
+
         private PhotoList _photos = new PhotoList();
         StringObserver stringob = new StringObserver();
         CountObserver countob = new CountObserver();
+       
        
 
         public MainWindow()
         {
             InitializeComponent();
+
+            
         }
 
         private void WindowLoaded(object sender, RoutedEventArgs e)
@@ -34,11 +40,9 @@ namespace IntroToStylingAndTemplating
             _photos.AddObserver(stringob);
             _photos.AddObserver(countob);
 
-            //yüklenen her fotoğraf için observerlara bilgi verilecek
-            foreach (Photo p in _photos)
-            {
-                _photos.notifyObservers(p.Source);
-            }
+            //ilk yüklemede observerlara bilgi verilecek
+                _photos.notifyObservers();
+            
 
         }
   
@@ -52,25 +56,32 @@ namespace IntroToStylingAndTemplating
             label.Content = countob.Display() + "\n";
         }
 
+        // fotoğraf ekleme butonu 
         private void btnOpenFile_Click(object sender, RoutedEventArgs e)
         {
-            string filePath = @"C:\Users\lenovo\Documents\GitHub\WPF-Samplesfork\Styles & Templates\IntroToStylingAndTemplating\images\a\dance.jpg";
-            string targetPath = @"C:\Users\lenovo\Documents\GitHub\WPF-Samplesfork\Styles & Templates\IntroToStylingAndTemplating\images\dance.jpg";
-            
-            File.Copy(filePath, targetPath, true);
+            //string filePath = @"C:\Users\lenovo\Documents\GitHub\WPF-Samplesfork\Styles & Templates\IntroToStylingAndTemplating\images\a\dance.jpg";
+            //string targetPath = @"C:\Users\lenovo\Documents\GitHub\WPF-Samplesfork\Styles & Templates\IntroToStylingAndTemplating\images\dance.jpg";
+            //File.Copy(filePath, targetPath, true);
+            //Photo foto = new Photo(filePath);         
 
-            Photo foto = new Photo(filePath);
+            _photos.setUpdateMethod(new AddPhoto());
+            _photos.GetUpdates();
 
-            _photos.Add(foto);
-           _photos.notifyObservers(foto.Source);
-           
             MessageBox.Show("Yeni fotoğraf eklendi");
               
             }
 
+        private void RemoveBtn_Click(object sender, RoutedEventArgs e)
+        {
+     
+            _photos.setUpdateMethod( new RemovePhoto());
+            _photos.GetUpdates();
+
+
+            MessageBox.Show("En baştaki fotoğraf silindi");
+
+        }
     }
-
-
     }
 
 

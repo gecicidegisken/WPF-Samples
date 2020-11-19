@@ -13,18 +13,19 @@ namespace IntroToStylingAndTemplating
     public class StringObserver : Gozlemleyiciler, Observer
     {
 
-        public void Update(string p)
+        public void Update(PhotoList list)
         {
-            this.observerData.Add(p);
-            
+            foreach (Photo e in list)
+                this.observerData = list;
+
         }
 
         public override string Display()
         {
             string newest = "";
-            foreach (string s in observerData)
+            foreach (Photo s in observerData)
             {
-                newest =newest + s + "\n";
+                newest =newest + s.Source + "\n";
              }
             return newest;
         }

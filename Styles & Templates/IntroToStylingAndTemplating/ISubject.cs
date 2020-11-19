@@ -11,7 +11,7 @@ namespace IntroToStylingAndTemplating
         //bu fonksiyonları implemente edecek.
         public void AddObserver(Observer o);
         public void DeleteObserver(Observer o);
-        public void notifyObservers(String T);
+        public void notifyObservers();
         
 
         

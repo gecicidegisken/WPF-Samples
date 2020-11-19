@@ -14,6 +14,8 @@ namespace IntroToStylingAndTemplating
     {
         //Uygulamada PhotoList bir Subject (Observable).
 
+        UpdateList guncelle;
+
         private List<Observer> observers;  //Observerlarýn tutulduðu liste bu olacak.
         public PhotoList()
         {
@@ -29,19 +31,29 @@ namespace IntroToStylingAndTemplating
             observers.Remove(o);
         }
 
-        public void notifyObservers(String T)
+        public void notifyObservers()
         {
             //Burada foreach döngüsüyle bütün observerlarýn update fonksiyonu çaðrýlacak
 
             foreach(Observer observer in observers)
             {
-                observer.Update(T);
+                observer.Update(this);
             }
         }
 
 
-         //Var olan kodlar
+        public void setUpdateMethod(UpdateList up)
+        {
+            guncelle = up;
+        }
+        public void GetUpdates()
+        {
+            guncelle.Update(this);
+            notifyObservers();
+        }
 
+        #region var olan kodlar 
+        //Var olan kodlar
         private DirectoryInfo _directory;
          
         public PhotoList(string path) : this(new DirectoryInfo(path))
@@ -84,4 +96,5 @@ namespace IntroToStylingAndTemplating
         }
         //Var olan kodlar
     }
+    #endregion
 }

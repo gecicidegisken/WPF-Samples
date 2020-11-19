@@ -10,7 +10,7 @@ namespace IntroToStylingAndTemplating
     //şekillerde işleyecek
   public  class Gozlemleyiciler
     {
-       public List<string> observerData = new List<string>();
+        public ICollection<Photo> observerData = new List<Photo>();
 
         public virtual string Display()
         {
