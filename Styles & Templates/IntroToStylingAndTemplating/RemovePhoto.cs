@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 namespace IntroToStylingAndTemplating
 {
@@ -9,7 +10,6 @@ namespace IntroToStylingAndTemplating
       //0.inedx'teki fotoğraf kaldırılıyor
         public void Update(PhotoList list)
         {
-
             list.RemoveAt(0);
            
         }

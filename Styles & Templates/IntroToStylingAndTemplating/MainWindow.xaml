@@ -61,7 +61,7 @@
             </Border>
         </DataTemplate>
 
-        <Style TargetType="ListBoxItem">
+        <Style TargetType="ListBoxItem" >
             <Setter Property="Opacity" Value="0.5" />
             <Setter Property="MaxHeight" Value="75" />
             <Style.Triggers>
@@ -74,7 +74,7 @@
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation
+                                <DoubleAnimation x:Name="animation"
                   Duration="0:0:0.2"
                   Storyboard.TargetProperty="MaxHeight"
                   To="90"  />
@@ -86,9 +86,9 @@
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard>
-                                <DoubleAnimation
+                                <DoubleAnimation x:Name="animation2"
                   Duration="0:0:1"
-                  Storyboard.TargetProperty="MaxHeight"  />
+                  Storyboard.TargetProperty="MaxHeight" To="75" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>

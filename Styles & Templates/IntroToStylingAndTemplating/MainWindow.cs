@@ -17,8 +17,6 @@ namespace IntroToStylingAndTemplating
     public partial class MainWindow : Window
 
     {
-       
-
         private PhotoList _photos = new PhotoList();
         StringObserver stringob = new StringObserver();
         CountObserver countob = new CountObserver();
