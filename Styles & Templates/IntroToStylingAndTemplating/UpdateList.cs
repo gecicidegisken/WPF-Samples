@@ -11,3 +11,4 @@ namespace IntroToStylingAndTemplating
         public void Update(PhotoList list);
     }
 }
+// :)
