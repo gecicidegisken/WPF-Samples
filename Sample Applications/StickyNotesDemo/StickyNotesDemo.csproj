@@ -57,9 +57,7 @@
     <Compile Include="Dialog.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="EmailDialog.cs" />
-    <Compile Include="Splash.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Splash.cs" />
     <Compile Include="MailSettingsDialog.cs" />
     <Compile Include="MainWindow.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

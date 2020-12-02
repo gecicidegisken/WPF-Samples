@@ -38,9 +38,7 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Target.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Target.cs" />
     <Compile Include="Target.designer.cs">
       <DependentUpon>Target.cs</DependentUpon>
     </Compile>

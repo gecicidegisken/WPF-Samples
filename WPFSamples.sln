@@ -360,6 +360,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergedResources", "Resources\MergedResources\MergedResources.csproj", "{77B42053-782D-445C-B068-1539579DB282}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Threading", "Threading", "{40CED083-6ED2-4E06-B2E4-927047CFFF15}"
+	ProjectSection(SolutionItems) = preProject
+		Styles & Templates\IntroToStylingAndTemplating\README.md = Styles & Templates\IntroToStylingAndTemplating\README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiThreadingWebBrowser", "Threading\MultiThreadingWebBrowser\MultiThreadingWebBrowser.csproj", "{E2D6CCD2-AE2B-45BF-84B3-D1EF38B290D5}"
 EndProject

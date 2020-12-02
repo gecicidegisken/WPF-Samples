@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventTriggers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="486" Width="525">
     <Window.Resources>
         <Style TargetType="Rectangle">
             <Setter Property="Width" Value="50" />
@@ -34,9 +34,16 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
-        <Rectangle Fill="Red" />
+
+    <StackPanel x:Name="stack" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-80" Height="488">
+        <CheckBox Content="Uzun" Height="50" Width="50" x:Name="rU" Background="AliceBlue" HorizontalAlignment="Left"/>
+        <CheckBox Content="Kırmızı Renkli" Height="50" Width="50" x:Name="rR" Background="AliceBlue" HorizontalAlignment="Left"/>
+        <Button x:Name="btnAdd" Click="addRectangle" HorizontalAlignment="Left" 
+                Width="300" Height="50" Content="Dikdörtgeni Dekore Et&#xA;(Default Boy= 50, Default Renk= Mavi)&#xD;&#xA;"
+                Background="BurlyWood"
+                />
+        <Rectangle Fill="RoyalBlue"/>
         <Rectangle Fill="Green" />
-        <Rectangle Fill="Blue" />
+        <Rectangle Fill="Blue" x:Name="kare" />
     </StackPanel>
 </Window>
